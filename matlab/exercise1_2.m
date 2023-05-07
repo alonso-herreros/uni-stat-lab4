@@ -1,5 +1,5 @@
 % 1.2. Random Vectors: Exercise 2
-disp('== 1.2. Random Vectors: Exercise 2 ==');
+disp("== 1.2. Random Vectors: Exercise 2 ==");
 
 N = 100000; % number of simulations
 
@@ -40,16 +40,16 @@ y = arrayfun(@(u) 0 + (u > 0.25), rand(1, N));
 r = x + y;
 % Let's plot the histogram
 figure(2);
-histogram(r, 20, Normalization='pdf');
-title('Simulated histogram of R');
-xlabel('r');
-ylabel('fR(r)');
+histogram(r, 20, Normalization="pdf");
+title("Simulated histogram of R");
+xlabel("r");
+ylabel("fR(r)");
 % Let's plot the theoretical pdf
 figure(3);
 x = linspace(-1, 2, 1000);
 y = arrayfun(@(x) (1/8)*(x >= -1 && x < 0) + (1/2)*(x >= 0 && x <= 1) + (3/8)*(x > 1 && x <= 2), x);
-plot(x, y, 'r');
-title('Theoretical PDF of R');
+plot(x, y, "r");
+title("Theoretical PDF of R");
 
 disp(" ");
 

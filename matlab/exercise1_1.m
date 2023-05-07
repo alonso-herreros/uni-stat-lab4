@@ -1,5 +1,5 @@
 %% 1.1. Random Vectors: Exercise 1
-disp('== 1.1. Random Vectors: Exercise 1 ==');
+disp("== 1.1. Random Vectors: Exercise 1 ==");
 
 N = 100000; % number of simulations
 
@@ -25,12 +25,12 @@ for T = [0.5, 1, 5]
 
     figure;
     tiledlayout(1, 2);
-    set(gcf, Units='Normalized', OuterPosition=[0.25 0.25 0.75 0.75])
+    set(gcf, Units="Normalized", OuterPosition=[0.25 0.25 0.75 0.75])
     % using tiledlayout to plot both simulated and theoretical results in the same window
 
     % plot the joint probability density function acquired by simulation
     nexttile;
-    histogram2(x, y, Normalization='pdf', NumBins=50);
+    histogram2(x, y, Normalization="pdf", NumBins=50);
     title("Simulated joint PDF for T = " + T);
     xlabel("x"); ylabel("y"); zlabel("f(x, y)");
 
