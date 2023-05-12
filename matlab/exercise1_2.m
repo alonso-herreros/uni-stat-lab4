@@ -36,7 +36,7 @@ text(0, 1, expression, Interpreter="latex", FontSize=14, Units="normalized", Hor
 
 % I will do a simulation to check the results
 x = unifrnd(-1, 1, N, 1);
-y = arrayfun(@(u) 0 + (u > 0.25), rand(1, N));
+y = arrayfun(@(u) 0 + (u > 0.25), rand(N, 1));
 r = x + y;
 % Let's plot the histogram
 figure(2);
