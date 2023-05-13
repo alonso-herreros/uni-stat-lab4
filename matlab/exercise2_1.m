@@ -18,7 +18,7 @@ disp("a) Analytically find mean and variance of Y(n). Are they constant when p=1
 % Var[Y] = E[Y²] - E[Y]² = E[(∑[i=1, n] Xᵢ)²] - (n*(2p - 1))² =
 %  = E[ ∑[i=1, n] Xᵢ² + ∑[i=1, n]∑[j≠i, n] Xᵢ*Xⱼ ] - (n*(2p-1))² =
 %  = ∑[i=1, n] (E[Xᵢ²]) + ∑[i=1, n]∑[j=1, n] (E[Xᵢ*Xⱼ]) - ∑[i=1, n]∑[j=i,i] (E[Xᵢ*Xⱼ]) - (n*(2p-1))² =
-%  = ∑[i=1, n] (1) + ∑[i=1, n]∑[j=1, n] (E[Xᵢ]*E[Xⱼ]) - ∑[i=1, n] (E[Xᵢ]*E[Xⱼ]) - (n*(2p-1))² =
+%  = ∑[i=1, n] (1) + ∑[i=1, n]∑[j=1, n] (E[Xᵢ]*E[Xⱼ]) - ∑[i=1, n] (E[Xᵢ]*E[Xᵢ]) - (n*(2p-1))² =
 %  = n + n²*(2p-1)² - n*(2p-1)² - (n*(2p-1))² = n - n*(2p-1)² = n*(1-(2p-1)²)
 % When p = 1/4,
 %  E[Y] = n*(2/4 - 1) = n*(-1/2) = -n/2
