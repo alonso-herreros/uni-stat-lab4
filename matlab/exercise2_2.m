@@ -1,8 +1,6 @@
 % 2.2. Harmonic processes
 disp("== 2.2. Harmonic processes ==");
 
-N = 10000; % number of simulations
-
 %%
 
 disp("Plot 3 realizations of Z(t) for t = 0:0.01:2π");
@@ -12,12 +10,17 @@ disp("Plot 3 realizations of Z(t) for t = 0:0.01:2π");
 % Three realizations of Z with t = 0:0.01:2π
 
 t = 0:0.01:2*pi;
-X = normrnd(0,1,3,length(t));
-Y = normrnd(0,1,3,length(t));
-Z = X.*cos(2*pi*t) + Y.*sin(2*pi*t);
+X = normrnd(0,1,3,1);
+Y = normrnd(0,1,3,1);
+Z = X*cos(2*pi*t) + Y*sin(2*pi*t);
 
 figure(1);
 plot(t,Z(1,:), t,Z(2,:), t,Z(3,:));
+% Describe the parameters of each realization in the top right corner
+legend(...
+    "Z_1: X=" + num2str(X(1), 2) + ", Y=" + num2str(Y(1), 2), ...
+    "Z_2: X=" + num2str(X(2), 2) + ", Y=" + num2str(Y(2), 2), ...
+    "Z_3: X=" + num2str(X(3), 2) + ", Y=" + num2str(Y(3), 2));
 
 disp(" ");
 
