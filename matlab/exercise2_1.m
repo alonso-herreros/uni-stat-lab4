@@ -82,7 +82,7 @@ disp('b) Overlapping plots of three realizations "of a Bernoulli process" with p
 % The instructions are not clear, so I'm going to plot three random walks, not three Bernoulli processes.
 % The random walks are simulated as in a), but with n = 1000 and p = 1/4
 n = 1000; p = 1/4;
-y = cumsum( 2*(rand(3, 1000) < p) - 1 , 2);
+y = cumsum( 2*(rand(3, n) < p) - 1 , 2);
 
 figure(3);
 plot(1:n, y(1,:), 1:n, y(2,:), 1:n, y(3,:));
